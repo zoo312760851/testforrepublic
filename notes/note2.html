@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #007BFF;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        details {
+            margin: 10px 0;
+        }
+        .custom-block {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>📌 目錄</h2>
+    <ul>
+        <li><a href="#section1">1. 使用 Mermaid 畫圖</a></li>
+        <li><a href="#section2">2. 高效 Markdown 技巧</a></li>
+        <li><a href="#section3">3. 進階功能</a></li>
+        <li><a href="#section4">4. 小結</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="section1">1. 使用 Mermaid 畫圖</h2>
+
+    <h3>流程圖</h3>
+    <pre class="mermaid">
+    graph TD
+        A[開始] --> B{是否繼續?}
+        B -->|是| C[進行下一步]
+        B -->|否| D[結束]
+    </pre>
+
+    <h3>思維導圖</h3>
+    <pre class="mermaid">
+    mindmap
+      root((學習計劃))
+        編程語言
+          Python
+            學習基礎語法
+            數據分析
+          JavaScript
+            前端開發
+            後端開發
+        數學基礎
+          線性代數
+          微積分
+        工具使用
+          Git
+            GitHub
+            GitLab
+          Markdown
+            基本語法
+            Mermaid 圖表
+    </pre>
+
+    <hr>
+
+    <h2 id="section2">2. 高效 Markdown 技巧</h2>
+
+    <h3>任務清單</h3>
+    <ul>
+        <li>✅ 完成 GitHub Pages 設置</li>
+        <li>✅ 添加 Mermaid 支持</li>
+        <li>🔲 完善筆記內容</li>
+    </ul>
+
+    <h3>使用 HTML</h3>
+    <p style="color: red; font-size: 20px;">這是一个使用 HTML 標籤的文本。</p>
+    <div class="custom-block">
+        <h3>自定义样式的块级内容</h3>
+        <p>你可以使用内联样式来控制背景颜色和其他样式。</p>
+    </div>
+
+    <h3>表格</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>項目</th>
+                <th>描述</th>
+                <th>狀態</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GitHub Pages</td>
+                <td>網頁托管工具</td>
+                <td>✅ 完成</td>
+            </tr>
+            <tr>
+                <td>Mermaid</td>
+                <td>繪圖語法工具</td>
+                <td>✅ 完成</td>
+            </tr>
+            <tr>
+                <td>Markdown</td>
+                <td>文本標記語法</td>
+                <td>🔄 進行中</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>折疊內容</h3>
+    <details>
+        <summary>點擊展開詳細說明</summary>
+        這裡是折疊內容的示例。
+    </details>
+
+    <h3>代碼片段</h3>
+    <pre><code>def hello_world():
+    print("Hello, World!")
+</code></pre>
+
+    <hr>
+
+    <h2 id="section3">3. 進階功能</h2>
+
+    <h3>使用 Emoji 增加趣味性</h3>
+    <ul>
+        <li>🚀 快速啟動</li>
+        <li>📌 重點標記</li>
+        <li>✅ 事項完成</li>
+    </ul>
+
+    <h3>添加自定義樣式</h3>
+    <pre><code>&lt;span style="color:red;"&gt;這是紅色文本&lt;/span&gt;
+&lt;span style="color:blue;"&gt;這是藍色文本&lt;/span&gt;
+</code></pre>
+
+    <h3>插入圖片</h3>
+    <img src="https://via.placeholder.com/150" alt="示例圖片">
+
+    <h3>插入視頻</h3>
+    <video controls width="500">
+        <source src="example.mp4" type="video/mp4">
+    </video>
+
+    <hr>
+
+    <h2 id="section4">4. 小結</h2>
+
+    <p>使用 Markdown 和 Mermaid，你可以輕鬆創建專業且美觀的筆記。結合 GitHub Pages，這些內容可以方便地分享給他人。嘗試以上技巧，讓你的筆記更上一層樓！</p>
+
+    <hr>
+
+    <h3>示例徽章</h3>
+    <img src="https://img.shields.io/badge/status-success-brightgreen" alt="Build Status">
+    <img src="https://img.shields.io/badge/python-3.9-blue" alt="Python">
+</body>
+</html>
