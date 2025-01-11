@@ -164,6 +164,86 @@
 
     <hr>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Mermaid Mindmap Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, monospace;
+        }
+        .copy-btn {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mermaid Mindmap Code Example</h1>
+    <p>Below is a Mermaid mindmap code snippet. You can copy it using the button:</p>
+    
+    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+    
+    <pre id="code-block">
+&lt;pre class=&quot;mermaid&quot;&gt;
+    mindmap
+      root((學習計劃))
+        編程語言
+          Python
+            學習基礎語法
+            數據分析
+          JavaScript
+            前端開發
+            後端開發
+        數學基礎
+          線性代數
+          微積分
+        工具使用
+          Git
+            GitHub
+            GitLab
+          Markdown
+            基本語法
+            Mermaid 圖表
+&lt;/pre&gt;
+    </pre>
+
+    <script>
+        function copyCode() {
+            const codeBlock = document.getElementById("code-block").innerText;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                alert("Failed to copy code: " + err);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+    
     <h2 id="section2">2. 高效 Markdown 技巧</h2>
 
     <h3>任務清單</h3>
