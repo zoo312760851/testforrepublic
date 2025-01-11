@@ -143,6 +143,35 @@
         B -->|否| D[結束]
     </pre>
 
+<body>
+    <h1>Mermaid Code Example</h1>
+    <p>Below is a Mermaid code snippet. You can copy it using the button:</p>
+    
+    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+    
+    <pre id="code-block">
+&lt;pre class=&quot;mermaid&quot;&gt;
+    graph TD
+        A[開始] --&gt; B{是否繼續?}
+        B --&gt;|是| C[進行下一步]
+        B --&gt;|否| D[結束]
+&lt;/pre&gt;
+    </pre>
+
+    <script>
+        function copyCode() {
+            const codeBlock = document.getElementById("code-block").innerText;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                alert("Failed to copy code: " + err);
+            });
+        }
+    </script>
+</body>
+
+
+    
     <h3>思維導圖</h3>
     <pre class="mermaid">
     mindmap
