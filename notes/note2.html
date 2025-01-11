@@ -14,41 +14,101 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #121212; /* 深色背景 */
+            color: #e0e0e0; /* 淡色文字 */
+        }
+        header {
+            background: #333; /* 深色背景 */
+            color: white; /* 白色文字 */
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header nav a {
+            color: #007BFF; /* 藍色連結 */
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        header nav a:hover {
+            text-decoration: underline;
         }
         h1, h2, h3, h4, h5, h6 {
-            color: #007BFF;
+            color: #90caf9; /* 淺藍色標題 */
+        }
+        ul, ol {
+            padding-left: 20px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            background-color: #1e1e1e; /* 深灰色背景 */
         }
         table, th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #444; /* 深色邊框 */
         }
         th, td {
             padding: 8px;
             text-align: left;
+            color: #e0e0e0;
         }
-        pre {
-            background: #f4f4f4;
+        th {
+            background-color: #333; /* 深色標題列背景 */
+        }
+        pre, code {
+            background: #1e1e1e; /* 深灰色背景 */
+            color: #c3e88d; /* 綠色文字 */
             padding: 10px;
             border-radius: 5px;
-            overflow-x: auto;
+            border: 1px solid #444; /* 深色邊框 */
         }
-        code {
-            background: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 3px;
+        pre {
+            overflow-x: auto;
         }
         details {
             margin: 10px 0;
+            background: #1e1e1e; /* 深灰色背景 */
+            padding: 10px;
+            border-radius: 5px;
+            color: #e0e0e0;
+        }
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #90caf9; /* 淺藍色標題 */
         }
         .custom-block {
-            background-color: #f4f4f4;
-            padding: 10px;
+            background-color: #1e1e1e; /* 深灰色背景 */
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #444; /* 深色邊框 */
+        }
+        .copy-btn {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 5px 10px;
+            background-color: #007BFF; /* 藍色按鈕 */
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3; /* 深藍色按鈕 */
+        }
+        hr {
+            border: 1px solid #444; /* 深色分隔線 */
+        }
+        a {
+            color: #90caf9; /* 淺藍色連結 */
+        }
+        a:hover {
+            color: #64b5f6; /* 更亮的藍色連結 */
+        }
+        img {
+            border: 2px solid #444; /* 深色圖片邊框 */
             border-radius: 5px;
         }
     </style>
@@ -63,6 +123,7 @@
             <a href="note2.html">網站特殊語法</a>
         </nav>
     </header>
+
     <h2>📌 目錄</h2>
     <ul>
         <li><a href="#section1">1. 使用 Mermaid 畫圖</a></li>
@@ -74,7 +135,6 @@
     <hr>
 
     <h2 id="section1">1. 使用 Mermaid 畫圖</h2>
-
     <h3>流程圖</h3>
     <pre class="mermaid">
     graph TD
@@ -82,71 +142,6 @@
         B -->|是| C[進行下一步]
         B -->|否| D[結束]
     </pre>
-
-<!--程式碼顯示 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Mermaid Code</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            overflow-x: auto;
-            font-family: Consolas, Monaco, monospace;
-        }
-        .copy-btn {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 5px 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .copy-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Mermaid Code Example</h1>
-    <p>Below is a Mermaid code snippet. You can copy it using the button:</p>
-    
-    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
-    
-    <pre id="code-block">
-&lt;pre class=&quot;mermaid&quot;&gt;
-    graph TD
-        A[開始] --&gt; B{是否繼續?}
-        B --&gt;|是| C[進行下一步]
-        B --&gt;|否| D[結束]
-&lt;/pre&gt;
-    </pre>
-
-    <script>
-        function copyCode() {
-            const codeBlock = document.getElementById("code-block").innerText;
-            navigator.clipboard.writeText(codeBlock).then(() => {
-                alert("Code copied to clipboard!");
-            }).catch(err => {
-                alert("Failed to copy code: " + err);
-            });
-        }
-    </script>
-</body>
-</html>
-
 
     <h3>思維導圖</h3>
     <pre class="mermaid">
@@ -173,88 +168,7 @@
 
     <hr>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Mermaid Mindmap Code</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            overflow-x: auto;
-            font-family: Consolas, Monaco, monospace;
-        }
-        .copy-btn {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 5px 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .copy-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Mermaid Mindmap Code Example</h1>
-    <p>Below is a Mermaid mindmap code snippet. You can copy it using the button:</p>
-    
-    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
-    
-    <pre id="code-block">
-&lt;pre class=&quot;mermaid&quot;&gt;
-    mindmap
-      root((學習計劃))
-        編程語言
-          Python
-            學習基礎語法
-            數據分析
-          JavaScript
-            前端開發
-            後端開發
-        數學基礎
-          線性代數
-          微積分
-        工具使用
-          Git
-            GitHub
-            GitLab
-          Markdown
-            基本語法
-            Mermaid 圖表
-&lt;/pre&gt;
-    </pre>
-
-    <script>
-        function copyCode() {
-            const codeBlock = document.getElementById("code-block").innerText;
-            navigator.clipboard.writeText(codeBlock).then(() => {
-                alert("Code copied to clipboard!");
-            }).catch(err => {
-                alert("Failed to copy code: " + err);
-            });
-        }
-    </script>
-</body>
-</html>
-
-
-    
     <h2 id="section2">2. 高效 Markdown 技巧</h2>
-
     <h3>任務清單</h3>
     <ul>
         <li>✅ 完成 GitHub Pages 設置</li>
@@ -263,7 +177,7 @@
     </ul>
 
     <h3>使用 HTML</h3>
-    <p style="color: red; font-size: 20px;">這是一个使用 HTML 標籤的文本。</p>
+    <p style="color: #ff5252; font-size: 20px;">這是一个使用 HTML 標籤的文本。</p>
     <div class="custom-block">
         <h3>自定义样式的块级内容</h3>
         <p>你可以使用内联样式来控制背景颜色和其他样式。</p>
@@ -297,53 +211,11 @@
         </tbody>
     </table>
 
-    <h3>折疊內容</h3>
-    <details>
-        <summary>點擊展開詳細說明</summary>
-        這裡是折疊內容的示例。
-    </details>
-
-    <h3>代碼片段</h3>
-    <pre><code>def hello_world():
-    print("Hello, World!")
-</code></pre>
-
-    <hr>
-
-    <h2 id="section3">3. 進階功能</h2>
-
-    <h3>使用 Emoji 增加趣味性</h3>
-    <ul>
-        <li>🚀 快速啟動</li>
-        <li>📌 重點標記</li>
-        <li>✅ 事項完成</li>
-    </ul>
-
-    <h3>添加自定義樣式</h3>
-    <pre><code>&lt;span style="color:red;"&gt;這是紅色文本&lt;/span&gt;
-&lt;span style="color:blue;"&gt;這是藍色文本&lt;/span&gt;
-</code></pre>
-
-    <h3>插入圖片</h3>
-    <img src="https://via.placeholder.com/150" alt="示例圖片">
-
-    <h3>插入視頻</h3>
-    <video controls width="500">
-        <source src="https://www.youtube.com/watch?v=ifsEKmQ_edw&list=RDifsEKmQ_edw&start_radio=1" type="video/mp4">
-    </video>
-
     <hr>
 
     <h2 id="section4">4. 小結</h2>
-
-    <p>使用 Markdown 和 Mermaid，你可以輕鬆創建專業且美觀的筆記。結合 GitHub Pages，這些內容可以方便地分享給他人。嘗試以上技巧，讓你的筆記更上一層樓！</p>
+    <p>使用 Markdown 和 Mermaid，你可以輕鬆創建專業且美觀的筆記。</p>
 
     <hr>
-
-    <h3>示例徽章</h3>
-    <img src="https://img.shields.io/badge/status-success-brightgreen" alt="Build Status">
-    <img src="https://img.shields.io/badge/python-3.9-blue" alt="Python">
-    <h2 id = "section5">5. 自己玩</h2>
-    
 </body>
 </html>
