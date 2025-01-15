@@ -1,9 +1,12 @@
+/* 基本樣式 */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-color: #f9f9f9;
 }
 
+/* Navbar 樣式 */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,8 +22,9 @@ body {
   margin-left: 20px;
 }
 
+/* Hero 樣式 */
 .hero {
-  background-image: url('../../photos/photo1.jpg');
+  background-image: url('banner.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -33,29 +37,33 @@ body {
   margin: 0;
 }
 
-.content {
+/* 下半部主要內容區域 */
+.main-content {
   display: flex;
   max-width: 1200px;
   margin: 20px auto;
   gap: 20px;
+  padding: 0 20px;
 }
 
+/* 左側欄位 */
 .left-column {
   flex: 1;
-  text-align: center;
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.left-column .profile-img {
-  width: 120px;
-  height: 120px;
+.profile-img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
+/* 右側欄位 */
 .right-column {
   flex: 2;
   background-color: #fff;
