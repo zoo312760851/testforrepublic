@@ -24,7 +24,7 @@ body {
 
 /* Hero 樣式 */
 .hero {
-  background-image: url('banner.jpg');
+  background-image: url('../../photos/photo2.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
