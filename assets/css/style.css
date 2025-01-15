@@ -4,37 +4,50 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f4f4f4;
 }
 
-/* 頂部圖片區 */
+/* 頂部區塊 */
 .header {
   position: relative;
-  background-color: #f4f4f4;
+  background-color: #333;
+  color: white;
   text-align: center;
   padding: 20px;
 }
 .header .header-content h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: #333;
+  color: #ffffff;
 }
 .header .wave-container {
   position: relative;
   overflow: hidden;
   line-height: 0;
-  height: 50px;
+  height: 100px;
 }
 .header .wave {
   position: relative;
   display: block;
   width: 100%;
-  height: 50px;
+  height: 100px;
+  animation: wave-animation 6s infinite linear;
+}
+
+/* 動態波浪動畫 */
+@keyframes wave-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* 頁面清單 */
 .navbar {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 20px;
 }
 .navbar ul {
@@ -44,9 +57,12 @@ body {
   display: flex;
   gap: 20px;
 }
+.navbar ul li {
+  display: inline;
+}
 .navbar ul li a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.3s;
